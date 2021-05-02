@@ -5,8 +5,8 @@ import React from 'react'
 const Square = ({ color }) => (
   <div style={{
     backgroundColor: color,
-    height: '110px',
-    width: '110px'
+    height: '100px',
+    width: '100px'
   }} />
 )
 
