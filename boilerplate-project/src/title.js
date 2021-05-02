@@ -2,13 +2,8 @@
 
 import React from 'react'
 
-const Title = ({ name, lastname }) => (
-  <h1>Olá {`${name} ${lastname}`}</h1>
+const Title = () => (
+  <h1>Olá React.js </h1>
 )
-
-Title.defaultProps = {
-  name: 'Desconhecido',
-  lastname: 'Sem sobrenome'
-}
 
 export default Title
