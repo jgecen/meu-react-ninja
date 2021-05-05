@@ -1,11 +1,19 @@
-'use strict'
+"use strict";
 
-import React from 'react'
+import React from "react";
 
 const Title = React.createClass({
-  render: function() {
-    return <h1>Olá React.js</h1>
-  }
+
+  getDefaultProps: function() {
+    return {
+      name: 'Gecen',
+      lastname: 'De Marchi'
+    }
+  },
+
+  render: function () {
+    return (<h1> {this.props.name} {this.props.lastname} </h1>)
+  },
 })
 
-export default Title
+export default Title;
