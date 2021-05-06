@@ -15,9 +15,7 @@ const Title = React.createClass({
 
   render: function () {
     return (
-      <h1>
-        {this.props.name} {this.props.lastname}{' '}
-      </h1>
+      <h1>{this.props.name} {this.props.lastname.first} {this.props.lastname.last}</h1>
     )
   }
 })
