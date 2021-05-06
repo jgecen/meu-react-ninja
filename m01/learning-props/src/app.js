@@ -7,7 +7,7 @@ class App extends Component {
   render () {
     return (
       <div className='container'>
-        <Title />
+        <Title lastname={0} />
       </div>
     )
   }
