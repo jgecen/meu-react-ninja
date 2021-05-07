@@ -7,7 +7,7 @@ class App extends Component {
   render () {
     return (
       <div className='container'>
-        <Title name='Joao' lastname={{first: 'Da', last: 'Silva'}} />
+        <Title name='Gecen' lastname={{first: 'Dacome', last: 'De Marchi'}} />
       </div>
     )
   }

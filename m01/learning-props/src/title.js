@@ -3,12 +3,12 @@
 import React from 'react'
 
 const Title = React.createClass({
-  getDefaultProps: function () {
+  getDefaultProps: () => {
     return {
-      name: 'Gecen',
+      name: 'NAME',
       lastname: {
-        first: 'Dacome',
-        last: 'De Marchi'
+        first: 'FIRST',
+        last: 'LAST'
       }
     }
   },
