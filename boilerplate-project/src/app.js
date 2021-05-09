@@ -4,9 +4,10 @@ import React, { Component } from 'react'
 import Title from './title'
 
 class App extends Component {
-  render () {
+  render() {
     return (
-      <div className='container'>
+      <div className="container" 
+           onClick={(e) => alert('clicou')}>
         <Title />
       </div>
     )
