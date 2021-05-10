@@ -20,6 +20,6 @@
     "react-dom": "^15.1.0"
   },
   "standard": {
-    "globals":["alert"]
+    "globals":["alert", "console"]
   }
 }
