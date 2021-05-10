@@ -7,7 +7,7 @@ class App extends Component {
     super()
     this.state = { text: 'Minha app' }
   }
-  /*
+  
   render() {
     return (
       <div
@@ -20,7 +20,7 @@ class App extends Component {
       </div>
     )
   }
-  */
+  
  //1 render sem arrow functions 
  /*
   render() {
@@ -32,11 +32,11 @@ class App extends Component {
           self.setState({ text: 'My App' })
         }}
       >
-        {self.state.text}
+        {this.state.text}
       </div>
     )
   }
-  */
+  
  //2 formato usando bind
   render() {
     return (
@@ -50,6 +50,7 @@ class App extends Component {
       </div>
     )
   }
+  */
 
 }
 
