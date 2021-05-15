@@ -1,57 +1,60 @@
 'use strict'
 
 import React, { Component } from 'react'
+import Button from './button'
+import Square from './square'
+
+/*
+class App extends Component {
+  constructor() {
+    super()
+    this.state = { color: 'red' }
+  }
+
+  render() {
+    return (
+      <div>
+        <div>
+          <Square key='1' color={this.state.color} />
+          <Button handleClick={() => this.setState({ color: 'red' })}>
+            Vermelho
+          </Button>
+          <Button handleClick={() => this.setState({ color: 'green' })}>
+            Verde
+          </Button>
+          <Button handleClick={() => this.setState({ color: 'blue' })}>
+            Azul
+          </Button>
+        </div>
+        <div>
+        <Square key='2' color={this.state.color} />
+
+
+        </div>
+      </div>
+    )
+  }
+}
+*/
 
 class App extends Component {
   constructor() {
     super()
-    this.state = { text: 'Minha app' }
+    this.state = { color: 'red' }
   }
-  
-  render() {
-    return (
-      <div
-        className="container"
-        onClick={() => {
-          this.setState({ text: 'My App' })
-        }}
-      >
-        {this.state.text}
-      </div>
-    )
-  }
-  
- //1 render sem arrow functions 
- /*
-  render() {
-    const self = this;
-    return (
-      <div
-        className="container"
-        onClick={function() {
-          self.setState({ text: 'My App' })
-        }}
-      >
-        {this.state.text}
-      </div>
-    )
-  }
-  
- //2 formato usando bind
-  render() {
-    return (
-      <div
-        className="container"
-        onClick={function() {
-          this.setState({ text: 'My App' })
-        }.bind(this)}
-      >
-        {this.state.text}
-      </div>
-    )
-  }
-  */
 
+  render() {
+    return (
+      <div>
+        <Square key="1" color={this.state.color} />
+        {['red', 'blue', 'green'].map((col) => (
+          <Button key={col} handleClick={() => this.setState({ color: col })}>
+            {col}
+          </Button>
+        ))}
+      </div>
+    )
+  }
 }
 
 export default App
