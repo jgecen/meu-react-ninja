@@ -40,10 +40,20 @@ class App extends Component {
 class App extends Component {
   constructor() {
     super()
+    console.log('constructor')
     this.state = { color: 'red' }
   }
 
+  componentWillMount(){
+    console.log('conponentWillMount')    
+  }
+
+  componentDidMount(){
+    console.log('componentDidMount')
+  }
+
   render() {
+    console.log('render')
     return (
       <div>
         <Square key="1" color={this.state.color} />
