@@ -6,7 +6,7 @@ import Timer from './timer'
 class App extends Component {
   constructor() {
     super()
-    this.state = { showTimer: true }
+    this.state = { showTimer: true, time: 0 }
   }
 
   componentWillMount() {
@@ -20,10 +20,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.showTimer && <Timer />}
-        <button onClick={ () =>{
-          this.setState({showTimer: !this.state.showTimer})
-        }} >show/hide</button>
+        <Timer time={this.state.time} />
+
+        <button
+          onClick={() => {
+            this.setState({ time: this.state.time + 10 })
+          }}
+        >
+          change props
+        </button>
       </div>
     )
   }
